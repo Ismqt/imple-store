@@ -1,0 +1,147 @@
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 100;
+}
+
+.modal-content {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 90%;
+  max-width: 800px;
+  max-height: 90vh;
+  overflow-y: auto;
+  background-color: var(--card);
+  border-radius: var(--radius);
+  padding: 2rem;
+  z-index: 101;
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.modal-title {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.modal-close-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.modal-body {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.info-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+}
+
+.info-item {
+  display: flex;
+  flex-direction: column;
+}
+
+.info-label {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.info-value {
+  color: var(--muted-foreground);
+}
+
+.divider {
+  border-color: var(--border);
+}
+
+.section-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.products-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.product-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  background-color: var(--muted);
+  border-radius: var(--radius);
+}
+
+.product-info .product-name {
+  font-weight: 600;
+}
+
+.product-details {
+  font-size: 0.875rem;
+  color: var(--muted-foreground);
+}
+
+.product-actions {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.product-total {
+  font-weight: 600;
+}
+
+.btn-view-product {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  background-color: var(--primary);
+  color: var(--primary-foreground);
+  border: none;
+  border-radius: var(--radius);
+  cursor: pointer;
+}
+
+.cost-summary {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.cost-row {
+  display: flex;
+  justify-content: space-between;
+}
+
+.cost-total {
+  font-weight: bold;
+  font-size: 1.125rem;
+}
+
+.payment-method {
+  font-weight: 600;
+}

@@ -1,4 +1,4 @@
-import { Routes, Route } from 'react-router-dom';
+import { Routes, Route, useParams } from 'react-router-dom';
 import { useContext, useState } from 'react';
 import { CartProvider, CartContext } from "./context/CartContext";
 import Header from "./components/Header";
@@ -11,6 +11,8 @@ import ShoppingCart from "./components/ShoppingCart";
 import PaymentModal from './components/PaymentModal';
 import { productsMock } from "./mocks/products";
 import { categoriesMock } from "./mocks/categories";
+import { ProductDetail } from './pages/ProductDetail';
+import OrdersManager from './pages/OrdersManager';
 
 // --- Componentes Separados para una Arquitectura Limpia ---
 
@@ -84,6 +86,11 @@ const AppContainer = () => {
   );
 }
 
+const ProductDetailWrapper = () => {
+  const { productId } = useParams();
+  return <ProductDetail productId={productId} />;
+};
+
 // 3. Componente Principal (Raíz)
 // Configura los proveedores globales (Contexto, Router)
 export default function App() {
@@ -91,6 +98,8 @@ export default function App() {
     <CartProvider>
       <Routes>
         <Route path="/" element={<AppContainer />} />
+        <Route path="/producto/:productId" element={<ProductDetailWrapper />} />
+        <Route path="/orders" element={<OrdersManager />} />
       </Routes>
     </CartProvider>
   );
