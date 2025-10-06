@@ -1,0 +1,99 @@
+.order-filters {
+  background-color: var(--card);
+  border-radius: var(--radius);
+  padding: 1.5rem;
+  border: 1px solid var(--border);
+  margin-bottom: 2rem;
+}
+
+.filters-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.filters-title {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+.clear-filters-btn {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: none;
+  border: none;
+  color: var(--primary);
+  cursor: pointer;
+}
+
+.filters-content {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 1rem;
+}
+
+.filter-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.filter-label {
+  margin-bottom: 0.5rem;
+  font-size: 0.875rem;
+  color: var(--muted-foreground);
+}
+
+.search-input-wrapper,
+.date-input-wrapper,
+.amount-input-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.search-input-icon,
+.date-input-icon {
+  position: absolute;
+  left: 0.75rem;
+  color: var(--muted-foreground);
+}
+
+.search-input,
+.date-input,
+.amount-input {
+  width: 100%;
+  padding-left: 2.5rem;
+}
+
+.amount-input-wrapper .currency-symbol {
+  position: absolute;
+  left: 0.75rem;
+  color: var(--muted-foreground);
+}
+
+.active-filters-section {
+  margin-top: 1.5rem;
+}
+
+.active-filters-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.active-filters-label {
+  font-weight: 600;
+}
+
+.filter-badge {
+  background-color: var(--muted);
+  padding: 0.25rem 0.75rem;
+  border-radius: 9999px;
+  font-size: 0.875rem;
+}
